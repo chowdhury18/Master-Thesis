@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+message Request {
+    string message = 1;
+}
+
+message Response {
+    string message = 1;
+}
+
+service Calculator {
+    rpc Node(Request) returns (Response) {}
+    rpc Node_GPU(Request) returns (Response) {}
+}
